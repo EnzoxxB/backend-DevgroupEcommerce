@@ -21,7 +21,7 @@ public class GameReviewService {
     private GameRepository gameRepository;
 
     // Inyectar la clave secreta desde el archivo de configuración
-    @Value("${jwt.secret}")
+    @Value("${jwtsecret}")
     private String secretKeyString;
 
 // Método para convertir ENTITY GAMEREVIEW a DTO

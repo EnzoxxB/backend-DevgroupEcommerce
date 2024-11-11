@@ -13,7 +13,7 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    @Value("${jwt.secret}")
+    @Value("${jwtsecret}")
     private String secretKeyString;
 
     // Extraer el nombre de usuario del token JWT

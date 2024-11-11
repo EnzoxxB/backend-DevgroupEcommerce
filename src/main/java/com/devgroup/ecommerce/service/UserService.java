@@ -28,7 +28,7 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Value("${jwt.secret}")
+    @Value("${jwtsecret}")
     private String secretKeyString;
 
     @Autowired
