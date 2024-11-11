@@ -59,7 +59,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("https://devgroup-games.netlify.app")); // Especificar el origen de tu frontend
+        configuration.setAllowedOrigins(List.of("https://devgroupgames.netlify.app")); // Especificar el origen de tu frontend
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Permitir los métodos necesarios
         configuration.setAllowedHeaders(List.of("*")); // Permitir todos los headers
         configuration.setAllowCredentials(true); // Permitir credenciales (cookies, tokens, etc.)
