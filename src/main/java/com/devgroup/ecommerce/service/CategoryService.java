@@ -1,14 +1,13 @@
 package com.devgroup.ecommerce.service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.devgroup.ecommerce.dto.CategoryDTO;
 import com.devgroup.ecommerce.models.Category;
 import com.devgroup.ecommerce.repository.CategoryRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CategoryService {
@@ -16,7 +15,7 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-    // convierte Category (Entidad) a CategoryDTO
+    // Convertir Category (Entidad) a CategoryDTO
     public CategoryDTO convertToDTO(Category category) {
         CategoryDTO categoryDTO = new CategoryDTO();
         categoryDTO.setId(category.getId());
@@ -25,7 +24,7 @@ public class CategoryService {
         return categoryDTO;
     }
 
-    // convierte CategoryDTO a Category (Entidad)
+    // Convertir CategoryDTO a Category (Entidad)
     public Category convertToEntity(CategoryDTO categoryDTO) {
         Category category = new Category();
         category.setId(categoryDTO.getId());

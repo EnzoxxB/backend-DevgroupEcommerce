@@ -55,19 +55,17 @@ public class SecurityConfig {
         return authenticationConfiguration.getAuthenticationManager();
     }
 
-    // Configuración CORS para permitir solicitudes desde el frontend
+    // Configuración CORS para permitir solicitudes desde el frontend (React)
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("https://devgroupgames.netlify.app")); // Especificar el origen de tu frontend
-        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Permitir los métodos necesarios
+        configuration.setAllowedOrigins(List.of("https://devgroupgames.netlify.app")); // Permitir el origen del frontend
+        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Permitir métodos específicos
         configuration.setAllowedHeaders(List.of("*")); // Permitir todos los headers
-        configuration.setAllowCredentials(true); // Permitir credenciales (cookies, tokens, etc.)
-    
-        // Registrar la configuración de CORS para todas las rutas
+        configuration.setAllowCredentials(true); // Permitir credenciales
+
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
-    
 }

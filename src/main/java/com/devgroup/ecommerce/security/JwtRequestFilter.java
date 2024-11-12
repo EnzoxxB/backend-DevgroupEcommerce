@@ -40,8 +40,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 "/users/register",
                 "/users/login",
                 "/users/forgot-password",
-                "/users/reset-password",
-                "/users/change-password");
+                "/users/reset-password");
 
         // Omitir validación JWT para rutas públicas
         if (publicPaths.contains(requestPath)) {

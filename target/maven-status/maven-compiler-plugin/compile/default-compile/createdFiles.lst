@@ -33,6 +33,7 @@ com\devgroup\ecommerce\dto\GameDTO.class
 com\devgroup\ecommerce\controllers\MercadoPagoController.class
 com\devgroup\ecommerce\dto\GameReviewDTO.class
 com\devgroup\ecommerce\security\JwtRequestFilter.class
+com\devgroup\ecommerce\EcommerceApplication$1.class
 com\devgroup\ecommerce\exceptions\GameNotFoundException.class
 com\devgroup\ecommerce\models\UserBuyer.class
 com\devgroup\ecommerce\dto\UserDTO.class
