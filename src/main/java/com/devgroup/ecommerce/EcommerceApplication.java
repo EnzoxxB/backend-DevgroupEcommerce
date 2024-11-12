@@ -16,9 +16,10 @@ public class EcommerceApplication {
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
 			public void addCorsMappings(CorsRegistry registry){
-				registry.addMapping("/**").allowedOrigins("devgroup-games.netlify.app")
+				registry.addMapping("/**").allowedOrigins("https://devgroup-games.netlify.app")
 						.allowedHeaders("*")
-						.allowedMethods("*");
+						.allowedMethods("*")
+						.allowCredentials(true);
 			}
 		};
 	}
