@@ -17,7 +17,7 @@ public class EcommerceApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry){
-				registry.addMapping("/**").allowedOrigins("https://devgroup-games.netlify.app")
+				registry.addMapping("/**").allowedOrigins("https://devgroupgames.netlify.app")
 						.allowedHeaders("*")
 						.allowedMethods("*")
 						.allowCredentials(true);
